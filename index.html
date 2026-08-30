@@ -4,11 +4,31 @@
     <title>The Clicker Game! Devlog</title>
   </head>
   <body>
-    <h1>The Clicker Game! Devlog</h1>
-    <hr>
-    <h2>1.95 on August 29th, 5:49 PM</h3>
-    <h3>Updated old DVD logo description.</h5>
-    <p><p>Spawns a bouncing logo that changes color on every wall bounce. <span class="owned">Owned: ${game.dvdOwned}</span></p>
-          <p>Spawns a bouncing logo that gives you money on each bounce. <span class="owned">Owned: ${game.dvdOwned}</span></p></p>
+      <h1>The Clicker Game! Devlog</h1>
+      <hr>
+    <div class="container">
+      <h2>1.95 on August 29th, 5:49 PM</h3>
+      <h3>Updated old DVD logo description.</h5>
+      <p><p>Spawns a bouncing logo that changes color on every wall bounce. <span class="owned">Owned: ${game.dvdOwned}</span></p>
+            <p>Spawns a bouncing logo that gives you money on each bounce. <span class="owned">Owned: ${game.dvdOwned}</span></p></p>
+    </div>
+    <div class="container">
+      <h2>1.96 on August 29th, 9:10 PM</h3>
+      <h3>Added hide mouse hint</h5>
+      <p>function showCursorHint(){
+    const banner = document.createElement('div');
+    banner.className = 'offline-banner';
+    banner.textContent = 'Press Fn+M to show.';
+    document.body.appendChild(banner);
+    requestAnimationFrame(() => banner.classList.add('visible'));
+    setTimeout(() => {
+      banner.classList.remove('visible');
+      setTimeout(() => banner.remove(), 500);
+    }, 3000);
+  }
+      if (game.hideCursor) showCursorHint();
+      if (game.hideCursor) showCursorHint();
+      </p>
+    </div>
   </body>
 </html>
